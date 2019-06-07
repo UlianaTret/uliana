@@ -4,14 +4,14 @@ if (isset($_SESSION['adk'])) {
     echo '<h2 align="center">Вся информация о парковке</h2>';
     echo 'номер эвакуатора: ***********<br>';
     echo '<a href="http://topilin.ru/uliana/index.php">выход</a>';
-    $mysqli = new mysqli ("127.0.0.1:3307", "root", "7ptyn5VT", "bd0");
+    $mysqli = new mysqli ("84.201.189.23:3306", "tret", "q456123", "bd0");
     $mysqli ->query ("SET NAMES 'utf8'");
     if ($mysqli-> connect_error) {
         die ("Ошибка подключения:". $mysqli-> connect_error);
     }
 
     $result_set = $mysqli->query("SELECT * FROM `place`");// все места
-echo '<form action="http://topilin.ru/uliana/worker.php" method="GET">';
+echo '<form action="http://84.201.189.23/uliana/worker.php" method="GET">';
 echo '<table class="table table-bordered table-hover">';
 echo '<thead>';
 echo '<tr class="active">';
@@ -34,14 +34,14 @@ echo '</table>';
 $mysqli->close();
 echo "</form>";
 
-} else header('Location: http://topilin.ru/uliana/index.php');
+} else header('Location: http://84.201.189.23/uliana/index.php');
 
 $ind = $_GET;
 if (isset($ind['press'])) {
 
     $num = $ind['press'];
 
-    $mysqli = new mysqli ("127.0.0.1:3307", "root", "7ptyn5VT", "bd0");
+    $mysqli = new mysqli ("84.201.189.23:3306", "tret", "q456123", "bd0");
     $mysqli->query("SET NAMES 'utf8'");
     if ($mysqli->connect_error) {
         die ("Ошибка подключения:" . $mysqli->connect_error);
