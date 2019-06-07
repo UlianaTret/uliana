@@ -6,7 +6,7 @@ if (isset($PERSON['press'])) {
     // ПРОВЕРКА ПУСТЫХ ПОЛЕЙ
     $empty = '';
     if (($PERSON['login'] != $empty) && ($PERSON['password']!= $empty)) {
-        $mysqli = new mysqli ("84.201.189.23", "tret", "q456123", "bd0");
+        $mysqli = new mysqli ("84.201.189.23:3306", "tret", "q456123", "bd0");
         $mysqli ->query ("SET NAMES 'utf8'");
         if ($mysqli-> connect_error) {
             die ("Ошибка подключения:". $mysqli-> connect_error);
