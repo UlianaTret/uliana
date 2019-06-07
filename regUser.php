@@ -6,7 +6,7 @@ if (isset($PERSON['press'])) {
     $empty = '';
     if (($PERSON['login'] != $empty) && ($PERSON['car'] != $empty) && ($PERSON['useNum'] != $empty) && ($PERSON['password1'] != $empty) && ($PERSON['password2'] != $empty)) {
         //пользователь есть в бд???
-        $mysqli = new mysqli ("127.0.0.1:3307", "root", "7ptyn5VT", "bd0");
+        $mysqli = new mysqli ("84.201.189.23:3306", "tret", "q456123", "bd0");
         $mysqli ->query ("SET NAMES 'utf8'");// указание кодировки при запросе
         //// Проверка подключения
         if ($mysqli-> connect_error) {
@@ -25,7 +25,7 @@ if (isset($PERSON['press'])) {
                     session_start();
                     $_SESSION['id'] = $for;
                     $mysqli->close();
-                    echo "http://topilin.ru/uliana/user.php";
+                    echo "http://84.201.189.23/uliana/user.php";
                     exit();
                 } else {echo "#lg";
                     exit();}
@@ -72,15 +72,15 @@ if (isset($PERSON['press'])) {
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="http://topilin.ru/uliana/index.php">Parking</a>
+            <a class="navbar-brand" href="http://84.201.189.23/uliana/index.php">Parking</a>
         </div>
         <div class="navbar-collapse collapse">
             <div>
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#">главная</a></li>
                     <li><a href="#">о нас</a></li>
-                    <li><a href="http://topilin.ru/uliana/user.php">хотите поставить машину?</a></li>
-                    <li><a href="http://topilin.ru/uliana/enterAdmin.php">вы сотрудник?</a></li>
+                    <li><a href="http://84.201.189.23/uliana/user.php">хотите поставить машину?</a></li>
+                    <li><a href="http://84.201.189.23/uliana/enterAdmin.php">вы сотрудник?</a></li>
                 </ul>
             </div>
         </div>
