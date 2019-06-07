@@ -1,6 +1,6 @@
 <?php
 echo '<h1>Приветствуем Вас на нашей парковке</h1>';
-$mysqli = new mysqli ("127.0.0.1:3307", "root", "7ptyn5VT", "bd0");
+$mysqli = new mysqli ("84.201.189.23:3306", "tret", "q456123", "bd0");
 $mysqli ->query ("SET NAMES 'utf8'");
 // Проверьте подключение
 if ($mysqli-> connect_error) {
@@ -18,7 +18,7 @@ $mysqli->close();
 
 session_start();
     if(isset($_SESSION['id'])) {
-        $mysqli = new mysqli ("127.0.0.1:3307", "root", "7ptyn5VT", "bd0");
+        $mysqli = new mysqli ("84.201.189.23:3306", "tret", "q456123", "bd0");
         $mysqli ->query ("SET NAMES 'utf8'");
         if ($mysqli-> connect_error) {
             die ("Ошибка подключения:". $mysqli-> connect_error);
@@ -104,15 +104,15 @@ session_start();
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="http://topilin.ru/uliana/index">Parking</a>
+            <a class="navbar-brand" href="http://84.201.189.23/uliana/index">Parking</a>
         </div>
         <div class="navbar-collapse collapse">
             <div>
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="http://topilin.ru/uliana/index.php">главная</a></li>
+                    <li class="active"><a href="http://84.201.189.23/uliana/index.php">главная</a></li>
                     <li><a href="#">о нас</a></li>
-                    <li><a href="http://topilin.ru/uliana/user.php">хотите поставить машину?</a></li>
-                    <li><a href="http://topilin.ru/uliana/enterAdmin.php">вы сотрудник?</a></li>
+                    <li><a href="http://84.201.189.23/uliana/user.php">хотите поставить машину?</a></li>
+                    <li><a href="http://84.201.189.23/uliana/enterAdmin.php">вы сотрудник?</a></li>
                 </ul>
             </div>
         </div>
