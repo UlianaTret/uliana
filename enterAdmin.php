@@ -5,7 +5,7 @@ if (isset($PERSON['press'])) {
     // ПРОВЕРКА ПУСТЫХ ПОЛЕЙ
     $empty = '';
     if (($PERSON['login'] != $empty) && ($PERSON['password']) && ($PERSON['adKey'])) {
-        $mysqli = new mysqli ("127.0.0.1:3307", "root", "7ptyn5VT", "bd0");
+        $mysqli = new mysqli ("84.201.189.23:3306", "tret", "q456123", "bd0");
         $mysqli ->query ("SET NAMES 'utf8'");
         if ($mysqli-> connect_error) {
             die ("Ошибка подключения:". $mysqli-> connect_error);
@@ -26,22 +26,22 @@ if (isset($PERSON['press'])) {
                         $page = $row['allPlace'];
                         $mysqli->close();
                         if ($page!=NULL) {
-                            header('Location: http://topilin.ru/uliana/statusParking.php');//window.location="http://localhost/1kIT/user.php";
-                        } else { header('Location: http://topilin.ru/uliana/worker.php');}
+                            header('Location: http://84.201.189.23/uliana/statusParking.php');//window.location="http://localhost/1kIT/user.php";
+                        } else { header('Location: http://84.201.189.23/uliana/worker.php');}
                     } else {
                         $mysqli->close();
-                        header('Location: http://topilin.ru/uliana/index.php');
+                        header('Location: http://84.201.189.23/uliana/index.php');
                     }
                 } else {
                     $mysqli->close();
-                    header('Location: http://topilin.ru/uliana/index.php');
+                    header('Location: http://84.201.189.23/uliana/index.php');
                 }
             } else {
                 $mysqli->close();
                 header('Location: http://84.201.189.23/uliana/index.php');
             }
         } //$mysqli->close();
-    } else header('Location: http://topilin.ru/uliana/index.php');
+    } else header('Location: http://84.201.189.23/uliana/index.php');
 }
 ?>
 
@@ -72,9 +72,9 @@ if (isset($PERSON['press'])) {
     </style>
 </head>
 <body>
-<div id='goAway' class='alert alert-warning' role='alert'>Если Вы не являетесь сотрудником, то, пожалйста, <a href="http://topilin.ru/uliana/index.php">покиньте страницу</a></div>
+<div id='goAway' class='alert alert-warning' role='alert'>Если Вы не являетесь сотрудником, то, пожалйста, <a href="http://84.201.189.23/uliana/index.php">покиньте страницу</a></div>
 
-<form action="http://topilin.ru/uliana/enterAdmin.php" class="form-group" method="POST">
+<form action="http://84.201.189.23/uliana/enterAdmin.php" class="form-group" method="POST">
     <div class="form-group">
         <label for="exampleInputEmail1">Ваше ФИО</label>
         <input id="login" type="text" class="form-control" name="login">
@@ -88,7 +88,7 @@ if (isset($PERSON['press'])) {
         <input id="adKey" type="password" class="form-control" name="adKey">
     </div>
     <input id="press" type="submit" name="press" class="btn btn-primary" value="Войти">
-    <br><a href="http://topilin.ru/uliana/index.php">назад</a>
+    <br><a href="http://84.201.189.23/uliana/index.php">назад</a>
 </form>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <!-- JQuery -->
