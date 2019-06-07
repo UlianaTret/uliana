@@ -1,6 +1,6 @@
 <?php
 echo '<h1>Приветствуем Вас на нашей парковке</h1>';
-$mysqli = new mysqli ("84.201.189.23:3306", "tret", "q456123", "bd0");
+$mysqli = new mysqli ("localhost:3306", "tret", "q456123", "bd0");
 $mysqli ->query ("SET NAMES 'utf8'");
 if ($mysqli-> connect_error) {
     die ("Ошибка подключения:". $mysqli-> connect_error);
