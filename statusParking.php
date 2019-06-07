@@ -5,7 +5,7 @@ if (isset($_SESSION['adk'])) {
     echo '<h2 align="center">Вся информация о парковке</h2>';
     echo 'номер эвакуатора: ***********<br>';
     echo '<a href="http://topilin.ru/uliana/index.php">выход</a>';
-    $mysqli = new mysqli ("127.0.0.1:3307", "root", "7ptyn5VT", "bd0");
+    $mysqli = new mysqli ("84.201.189.23:3306", "tret", "q456123", "bd0");
     $mysqli ->query ("SET NAMES 'utf8'");
     if ($mysqli-> connect_error) {
         die ("Ошибка подключения:". $mysqli-> connect_error);
@@ -38,7 +38,7 @@ if (isset($_SESSION['adk'])) {
     echo '</table>';
     $mysqli->close();
 ///////////////////////////////////////////////////////////////////
-    $mysqli = new mysqli ("127.0.0.1:3307", "root", "7ptyn5VT", "bd0");
+    $mysqli = new mysqli ("84.201.189.23:3306", "tret", "q456123", "bd0");
     $mysqli ->query ("SET NAMES 'utf8'");
     if ($mysqli-> connect_error) {
         die ("Ошибка подключения:". $mysqli-> connect_error);
@@ -69,7 +69,7 @@ if (isset($_SESSION['adk'])) {
     echo '</table>';
     $mysqli->close();
     //session_destroy();
-}else header('Location: http://topilin.ru/uliana/index.php');
+}else header('Location: http://84.201.189.23/uliana/index.php');
 session_destroy();
 ?>
 <!DOCTYPE html>
